@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenCode Mobile — Gizlilik Politikası / Privacy Policy</title>
+<meta name="description" content="OpenCode Mobile iOS uygulamasının gizlilik politikası. Privacy policy for the OpenCode Mobile iOS app.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1c1e;
+    --muted: #6b6b70;
+    --rule: #e3e3e6;
+    --accent: #3a5bd9;
+    --card: #f6f6f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d0d0d;
+      --fg: #ececee;
+      --muted: #a7a7b0;
+      --rule: #2a2a2d;
+      --accent: #82aaff;
+      --card: #171719;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 16px 96px; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 24px; margin-bottom: 32px; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; letter-spacing: -0.4px; }
+  h2 { font-size: 21px; margin: 40px 0 12px; letter-spacing: -0.2px; }
+  h3 { font-size: 17px; margin: 28px 0 8px; }
+  p, li { color: var(--fg); }
+  .meta { color: var(--muted); font-size: 14px; margin: 0; }
+  .langbar { margin-top: 18px; font-size: 14px; }
+  .langbar a { color: var(--accent); text-decoration: none; margin-right: 14px; }
+  .langbar a:hover { text-decoration: underline; }
+  .lead {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 24px 0 8px;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; display: block; overflow-x: auto; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; white-space: nowrap; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: var(--card); padding: 1px 5px; border-radius: 4px; }
+  a { color: var(--accent); }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 56px 0 40px; }
+  footer { color: var(--muted); font-size: 14px; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--rule); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>OpenCode Mobile — Gizlilik Politikası</h1>
+  <p class="meta">Son güncelleme: 20 Eylül 2026 · Sorumlu: Hayri Odabaş · <a href="mailto:hayriodabas@gmail.com">hayriodabas@gmail.com</a></p>
+  <p class="langbar"><a href="#tr">Türkçe</a><a href="#en">English</a></p>
+</header>
+
+<section id="tr">
+
+<div class="lead">
+  <strong>Özet.</strong> OpenCode Mobile bir <em>istemci</em> uygulamasıdır. Geliştirici olarak
+  işlettiğimiz hiçbir sunucu, hesap sistemi, analitik altyapısı veya reklam ağı yoktur.
+  Uygulamanın ürettiği trafik yalnızca <strong>sizin yapılandırdığınız</strong> hedeflere gider:
+  kendi OpenCode sunucunuz, kendi OpenCode Zen hesabınız ve kendi GitHub hesabınız.
+  Bu verilere erişimimiz yoktur ve hiçbir veriyi toplamayız.
+</div>
+
+<h2>Toplanan veriler</h2>
+<p><strong>Hiçbiri.</strong> Uygulama geliştiriciye hiçbir veri göndermez. Analitik SDK'sı, çökme
+raporlama servisi, reklam kimliği veya izleme teknolojisi içermez. Uygulama, App Tracking
+Transparency anlamında kullanıcılar arası izleme yapmaz.</p>
+
+<h2>Cihazda saklanan veriler</h2>
+<table>
+  <thead><tr><th>Veri</th><th>Yer</th><th>Koruma</th></tr></thead>
+  <tbody>
+    <tr><td>Sunucu profilleri (adres, kullanıcı adı)</td><td>UserDefaults</td><td>Cihaz yedeği kapsamında</td></tr>
+    <tr><td>Sunucu şifresi / erişim anahtarı</td><td>iOS Keychain</td><td><code>WhenUnlockedThisDeviceOnly</code></td></tr>
+    <tr><td>GitHub token'ı (OAuth veya PAT)</td><td>iOS Keychain</td><td><code>WhenUnlockedThisDeviceOnly</code></td></tr>
+    <tr><td>OpenCode Zen API anahtarı</td><td>iOS Keychain</td><td><code>WhenUnlockedThisDeviceOnly</code></td></tr>
+    <tr><td>Sohbet geçmişi ve mesaj taslakları</td><td>Application Support</td><td>iOS tam dosya koruması</td></tr>
+    <tr><td>Tercihler (seçili model, tema vb.)</td><td>UserDefaults</td><td>—</td></tr>
+  </tbody>
+</table>
+<p>Keychain öğeleri <code>ThisDeviceOnly</code> ile işaretlidir: yedeklere veya başka bir cihaza
+aktarılmaz. Uygulamayı silmek, Keychain öğeleri dışındaki tüm yerel veriyi siler; Keychain
+kayıtları uygulama içindeki “Çıkış yap” eylemleriyle temizlenir.</p>
+
+<h2>Verinin gittiği yerler</h2>
+
+<h3>1. Kendi OpenCode sunucunuz (“Kendi Sunucum” kipi)</h3>
+<p>Girdiğiniz adrese mesajlarınız, dosya istekleri ve komutlar gönderilir. Bu sunucuyu siz
+işletirsiniz; ajan, kod çalıştırma ve LLM sağlayıcı anahtarları orada bulunur. Uygulama HTTP
+adreslerine izin verir (Tailscale/VPN gibi güvenilir ağlar için); genel internet üzerinden
+HTTPS kullanılması önerilir.</p>
+
+<h3>2. OpenCode Zen (“Bulut” kipi)</h3>
+<p>Etkinleştirirseniz istekleriniz <code>opencode.ai</code> alan adındaki OpenCode Zen ağ geçidine,
+<strong>sizin</strong> API anahtarınızla gönderilir. Gönderdiğiniz istemler ve aldığınız yanıtlar
+OpenCode'un gizlilik politikasına tabidir. Hesap sizindir; biz aracı değiliz.</p>
+
+<h3>3. GitHub</h3>
+<p>GitHub özelliklerini kullanırsanız istekler <code>api.github.com</code> adresine (veya girdiğiniz
+GitHub Enterprise adresine) sizin token'ınızla gider. Token yalnız girildiği origin'e gönderilir.</p>
+
+<h3>4. Apple Konuşma Tanıma (sesli mod)</h3>
+<p>Sesli mod yalnız siz başlattığınızda mikrofona erişir. Cihaz-üstü tanıma destekleniyorsa
+uygulama bunu <strong>zorunlu</strong> kılar ve ses cihazdan çıkmaz. Cihazınız veya seçili dil
+cihaz-üstü tanımayı desteklemiyorsa iOS sesi Apple'ın sunucularında işler; bu durumda Apple'ın
+gizlilik politikası geçerlidir. Ses kaydı uygulama tarafından saklanmaz.</p>
+
+<p>Bu dört hedefin hiçbiri bize veri iletmez.</p>
+
+<h2>Çocukların gizliliği</h2>
+<p>Uygulama çocuklara yönelik değildir ve yaş bilgisi toplamaz.</p>
+
+<h2>Haklarınız</h2>
+<p>Uygulama sizin hakkınızda veri tutmadığı için bize yöneltilecek bir erişim, düzeltme veya
+silme talebi doğmaz. Yerel veriyi uygulamayı silerek, uzak veriyi ise kendi sunucunuz /
+OpenCode Zen / GitHub hesabınız üzerinden yönetirsiniz.</p>
+
+<h2>Değişiklikler</h2>
+<p>Bu politika değişirse yukarıdaki tarih güncellenir ve yeni sürüm bu adreste yayımlanır.</p>
+
+<h2>İletişim</h2>
+<p><a href="mailto:hayriodabas@gmail.com">hayriodabas@gmail.com</a></p>
+
+</section>
+
+<hr>
+
+<section id="en" lang="en">
+
+<h1>OpenCode Mobile — Privacy Policy</h1>
+<p class="meta">Last updated: 20 September 2026 · Controller: Hayri Odabaş · <a href="mailto:hayriodabas@gmail.com">hayriodabas@gmail.com</a></p>
+
+<div class="lead">
+  <strong>Summary.</strong> OpenCode Mobile is a <em>client</em> app. The developer runs no server,
+  no account system, no analytics backend and no ad network. All traffic the app produces goes
+  only to destinations <strong>you</strong> configure: your own OpenCode server, your own OpenCode
+  Zen account and your own GitHub account. We have no access to that data and we collect nothing.
+</div>
+
+<h2>Data collected</h2>
+<p><strong>None.</strong> The app sends no data to the developer. It contains no analytics SDK, no
+crash reporting service, no advertising identifier and no tracking technology. The app does not
+track users across apps or websites in the App Tracking Transparency sense.</p>
+
+<h2>Data stored on your device</h2>
+<table>
+  <thead><tr><th>Data</th><th>Location</th><th>Protection</th></tr></thead>
+  <tbody>
+    <tr><td>Server profiles (address, username)</td><td>UserDefaults</td><td>Included in device backup</td></tr>
+    <tr><td>Server password / access key</td><td>iOS Keychain</td><td><code>WhenUnlockedThisDeviceOnly</code></td></tr>
+    <tr><td>GitHub token (OAuth or PAT)</td><td>iOS Keychain</td><td><code>WhenUnlockedThisDeviceOnly</code></td></tr>
+    <tr><td>OpenCode Zen API key</td><td>iOS Keychain</td><td><code>WhenUnlockedThisDeviceOnly</code></td></tr>
+    <tr><td>Chat history and message drafts</td><td>Application Support</td><td>iOS complete file protection</td></tr>
+    <tr><td>Preferences (selected model, theme…)</td><td>UserDefaults</td><td>—</td></tr>
+  </tbody>
+</table>
+<p>Keychain items are marked <code>ThisDeviceOnly</code>: they are never written to backups or
+transferred to another device. Deleting the app removes all local data other than Keychain items;
+those are cleared by the sign-out actions inside the app.</p>
+
+<h2>Where data goes</h2>
+
+<h3>1. Your own OpenCode server (“My Own Server” mode)</h3>
+<p>Your messages, file requests and commands are sent to the address you enter. You operate that
+server; the agent, code execution and LLM provider keys live there. The app permits HTTP addresses
+for trusted private networks such as Tailscale or a VPN; HTTPS is recommended over the public
+internet.</p>
+
+<h3>2. OpenCode Zen (“Cloud” mode)</h3>
+<p>If you enable it, your requests go to the OpenCode Zen gateway on the <code>opencode.ai</code>
+domain, authenticated with <strong>your</strong> API key. The prompts you send and the responses you
+receive are subject to OpenCode's own privacy policy. The account is yours; we are not an
+intermediary.</p>
+
+<h3>3. GitHub</h3>
+<p>If you use the GitHub features, requests go to <code>api.github.com</code> (or the GitHub
+Enterprise address you enter) with your token. The token is only ever sent to the origin it was
+entered for.</p>
+
+<h3>4. Apple Speech Recognition (voice mode)</h3>
+<p>Voice mode accesses the microphone only when you start it. Where the device supports on-device
+recognition, the app <strong>requires</strong> it and audio never leaves the device. If your device
+or the selected language does not support on-device recognition, iOS processes the audio on Apple's
+servers and Apple's privacy policy applies. The app stores no audio recordings.</p>
+
+<p>None of these four destinations sends data to us.</p>
+
+<h2>Children's privacy</h2>
+<p>The app is not directed at children and collects no age information.</p>
+
+<h2>Your rights</h2>
+<p>Because the app holds no data about you on our side, there is no access, correction or deletion
+request to direct to us. You manage local data by deleting the app, and remote data through your own
+server, OpenCode Zen account or GitHub account.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the date above is updated and the new version is published at this address.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:hayriodabas@gmail.com">hayriodabas@gmail.com</a></p>
+
+</section>
+
+<footer>
+  OpenCode Mobile · iOS · <a href="#tr">Türkçe</a> · <a href="#en">English</a>
+</footer>
+
+</div>
+</body>
+</html>
