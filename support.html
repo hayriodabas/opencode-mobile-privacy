@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenCode Mobile — Destek / Support</title>
+<meta name="description" content="OpenCode Mobile iOS uygulaması için destek. Support for the OpenCode Mobile iOS app.">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1c1c1e; --muted: #6b6b70;
+    --rule: #e3e3e6; --accent: #3a5bd9; --card: #f6f6f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d0d0d; --fg: #ececee; --muted: #a7a7b0;
+      --rule: #2a2a2d; --accent: #82aaff; --card: #171719;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 16px 96px; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 24px; margin-bottom: 32px; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; letter-spacing: -0.4px; }
+  h2 { font-size: 21px; margin: 40px 0 12px; letter-spacing: -0.2px; }
+  h3 { font-size: 17px; margin: 26px 0 6px; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0; }
+  .langbar { margin-top: 18px; font-size: 14px; }
+  .langbar a { color: var(--accent); text-decoration: none; margin-right: 14px; }
+  .card {
+    background: var(--card); border: 1px solid var(--rule);
+    border-radius: 12px; padding: 16px 18px; margin: 24px 0;
+  }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: var(--card); padding: 1px 5px; border-radius: 4px; }
+  a { color: var(--accent); }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 56px 0 40px; }
+  footer { color: var(--muted); font-size: 14px; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--rule); }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>OpenCode Mobile — Destek</h1>
+  <p class="meta">iPhone ve iPad için OpenCode istemcisi</p>
+  <p class="langbar"><a href="#tr">Türkçe</a><a href="#en">English</a><a href="./">Gizlilik / Privacy</a></p>
+</header>
+
+<section id="tr">
+
+<div class="card">
+  <strong>İletişim:</strong> <a href="mailto:hayriodabas@gmail.com">hayriodabas@gmail.com</a><br>
+  Sorununu yazarken uygulama sürümünü (Ayarlar ekranının altında yazar), cihaz modelini ve
+  iOS sürümünü eklersen çok daha hızlı yardımcı olabilirim.
+</div>
+
+<h2>Sık karşılaşılanlar</h2>
+
+<h3>Sunucuya bağlanamıyorum</h3>
+<ul>
+  <li>Sunucuda <code>opencode serve</code> çalışıyor mu ve dinlediği port uygulamadaki portla aynı mı?</li>
+  <li>Telefon sunucuya ulaşabiliyor mu? Ev ağının dışındaysan Tailscale/VPN bağlantısının açık
+      olması gerekir; <code>127.0.0.1</code> telefonda <em>telefonun kendisi</em> demektir, bilgisayarın değil.</li>
+  <li>HTTPS anahtarı sunucunun gerçek durumuyla eşleşiyor mu? TLS'i olmayan bir sunucuya HTTPS ile
+      bağlanmak “TLS error” verir.</li>
+  <li>Sunucu şifresi ayarlıysa (<code>OPENCODE_SERVER_PASSWORD</code>) uygulamada da girilmiş olmalı.</li>
+</ul>
+
+<h3>Bulut kipinde anahtar kabul edilmiyor</h3>
+<p>Anahtarı <a href="https://console.opencode.ai">console.opencode.ai</a> üzerinden alman ve
+kopyalarken baştaki/sondaki boşlukları almaman gerekir. Anahtar geçersizse uygulama bunu açıkça yazar.</p>
+
+<h3>Yanıt gelmiyor veya oturum takılı kaldı</h3>
+<p>Sağlayıcı kotan dolmuş olabilir — uygulama sunucudan gelen uyarıyı üstte bir bantta gösterir.
+Takılan bir turu sohbet ekranındaki durdurma düğmesiyle sonlandırabilirsin.</p>
+
+<h3>Sesli mod çalışmıyor</h3>
+<p>İlk kullanımda mikrofon ve konuşma tanıma izinlerini vermen gerekir (iOS Ayarlar → OpenCode).
+Cihaz-üstü tanıma her dilde mevcut değildir; desteklenmiyorsa sesli mod sınırlı çalışabilir.</p>
+
+<h3>Sohbet geçmişim nerede duruyor?</h3>
+<p>Yalnız cihazında. Uygulamayı silmek geçmişi de siler. Ayrıntı için
+<a href="./">gizlilik politikası</a>.</p>
+
+</section>
+
+<hr>
+
+<section id="en" lang="en">
+
+<h1>OpenCode Mobile — Support</h1>
+<p class="meta">OpenCode client for iPhone and iPad</p>
+
+<div class="card">
+  <strong>Contact:</strong> <a href="mailto:hayriodabas@gmail.com">hayriodabas@gmail.com</a><br>
+  Including the app version (shown at the bottom of the Settings screen), your device model and
+  iOS version makes it much easier to help.
+</div>
+
+<h2>Common questions</h2>
+
+<h3>I can't connect to my server</h3>
+<ul>
+  <li>Is <code>opencode serve</code> running, and does its port match the port in the app?</li>
+  <li>Can the phone reach the server? Outside your home network you need Tailscale or a VPN;
+      <code>127.0.0.1</code> on the phone means <em>the phone itself</em>, not your computer.</li>
+  <li>Does the HTTPS switch match reality? Connecting over HTTPS to a server without TLS produces
+      a “TLS error”.</li>
+  <li>If the server sets <code>OPENCODE_SERVER_PASSWORD</code>, the same password must be entered
+      in the app.</li>
+</ul>
+
+<h3>My cloud API key is rejected</h3>
+<p>Get the key from <a href="https://console.opencode.ai">console.opencode.ai</a> and make sure no
+leading or trailing whitespace is copied with it. The app states plainly when a key is invalid.</p>
+
+<h3>No response, or a session appears stuck</h3>
+<p>Your provider quota may be exhausted — the app surfaces the server's warning in a banner at the
+top. You can end a stuck turn with the stop button on the chat screen.</p>
+
+<h3>Voice mode doesn't work</h3>
+<p>Grant microphone and speech recognition permission on first use (iOS Settings → OpenCode).
+On-device recognition is not available for every language; where it is unavailable, voice mode may
+be limited.</p>
+
+<h3>Where is my chat history stored?</h3>
+<p>Only on your device. Deleting the app deletes the history too. See the
+<a href="./">privacy policy</a> for details.</p>
+
+</section>
+
+<footer>
+  OpenCode Mobile · <a href="#tr">Türkçe</a> · <a href="#en">English</a> · <a href="./">Gizlilik / Privacy</a>
+</footer>
+
+</div>
+</body>
+</html>
